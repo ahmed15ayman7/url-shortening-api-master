@@ -1,0 +1,192 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root{
+
+--Cyan: hsl(180, 66%, 49%);
+--Dark-Violet: hsl(257, 27%, 26%);
+--Red: hsl(0, 87%, 67%);
+--Gray: hsl(0, 0%, 75%);
+--Grayish-Violet: hsl(257, 7%, 63%);
+--Very-Dark-Blue: hsl(255, 11%, 22%);
+--Very-Dark-Blue2: #382e56;
+--Very-Dark-Violet: hsl(260, 8%, 14%);
+    
+}
+*{
+    border: none !important;
+    outline: none !important;
+
+}
+body{
+    
+    font-family: 'Epilogue', sans-serif;
+}
+p{
+    font-size: 18px !important;
+    color: var(--Gray);
+}
+.nav-link{
+    color: var(--Grayish-Violet) !important;
+}
+.nav-link:hover{
+    color: var(--Very-Dark-Violet) !important;
+}
+
+.navbar .navbar-toggler:focus{
+    box-shadow: none;
+   
+}
+
+
+.btn-main{
+    color: white !important;
+    width: 100%;
+    font-size: 15px;
+
+    background-color: var(--Cyan) !important;
+
+}
+.btn-main:hover{
+    opacity: .7;
+    justify-content: space-evenly;
+}
+.btn-main.copy:focus{
+    box-shadow: none;
+}
+.wrong [type="text"]{
+    position: relative !important;
+    border: 1px solid var(--Red) !important;
+    color: var(--Red) !important;
+}
+.wrong::before{
+    content: 'please add a link' !important;
+    position: absolute !important;
+    bottom: 19% !important;
+    left: 35px !important;
+    font-size: 15px;
+    color: var(--Red);
+}
+.succes [type="text"]{
+    position: relative !important;
+    border: 1px solid #00ff00 !important;
+    color: #00ff00 !important;
+}
+.succes::before{
+    content: 'link succesfully' !important;
+    position: absolute !important;
+    bottom: 19% !important;
+    left: 35px !important;
+    font-size: 15px;
+    color: #00ff00;
+    
+}
+.Shorten{
+    
+    padding:  35px 0 !important;
+    background: var(--Very-Dark-Blue2) url(../images/bg-shorten-desktop.svg) no-repeat;
+    background-size: cover;
+    transform: translateY(50%);
+}
+.links div h6{
+    color: var(--Cyan);
+}
+.advanced{
+    padding-bottom: 150px !important;
+    background: #EFF1F7 ;
+}
+.bdf .box-bdf div{
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    top: 0;
+    transform: translateY(-50%);
+    background-color: var(--Very-Dark-Blue);
+}
+.bdf .box-d{
+    transform: translateY(20%);
+}
+.bdf .box-f{
+    transform: translateY(40%);
+}
+.bdf::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    height: 10px;
+    background-color: var(--Cyan);
+    width: 70%;
+    transform: translateY(50%);
+
+}
+.boost{
+    background: var(--Very-Dark-Blue2) url(../images/bg-boost-desktop.svg) no-repeat;
+}
+.footer{
+    background-color: var(--Very-Dark-Blue);
+}
+.footer div div ul li{
+    color: var(--Grayish-Violet);
+    list-style-type: none;
+    cursor: pointer;
+}
+.footer div div ul li:hover,.footer div div ul img:hover{
+    color: var(--Cyan) !important;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+@media (max-width: 1024px){
+    .navbar-collapse{
+        position: absolute;
+        top: 100%; right: 3%;
+        left: 0%;
+        width: 88%;
+        border-radius: 2% !important;
+        background-color: var(--Very-Dark-Blue2);
+        text-align: center;
+        margin: 0 20px !important;
+    }
+    .navbar-collapse ul li a{
+        color: white !important;
+    }
+    .navbar-collapse ul li a:hover{
+        color: whitesmoke !important;
+        opacity: .7 !important;
+    }
+    .bdf::before{
+        
+        top: 0%;
+        right: 50%;
+        height: 100%;
+        background-color: var(--Cyan);
+        width: 10px;
+        transform: translateX(50%);
+    
+    }
+    .bdf .box-bdf div{
+       right: 50%;
+       transform: translateY(-50%) translateX(50%);
+        
+    }
+    .wrong::before{
+       
+        bottom: 80% !important;
+        left: 20px !important;
+        
+    }
+    
+    .succes::before{
+        
+        bottom: 80% !important;
+        left: 20px !important;
+    }
+    .links div h6 ,.links div h5{
+        font-size: 15px;
+    }
+}
+@media (max-width: 375px){
+    .links div h6 ,.links div h5{
+        font-size: 9px;
+    }
+}
