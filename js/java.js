@@ -45,7 +45,13 @@ let createDivLink=(link,rundomlink)=>{
         `
         rowdiv.appendChild(btncopyied);
         divLinks.appendChild(rowdiv);
-        btncopyied.addEventListener('click',a=>{
+        btncopyied.addEventListener('click', async (a)=>{
+            try{
+
+                await navigator.clipboard.writeText(e.link);
+            }catch(e){
+                alert(e);
+            }
             btncopyied.style.cssText="background: #382e56 !important;";
             btncopyied.textContent='copied!'
             a.preventDefault();
